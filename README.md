@@ -1,7 +1,15 @@
 
 ****AI Bus Trip Planner – ADK Capstone Project****
+---
+
 
 This project demonstrates an AI-powered bus trip planner agent, created for the Kaggle Capstone Project using the Agent Development Kit (ADK). The agent helps users plan bus journeys from home to college (and back), with features like interactive memory, custom trip scheduling, and dynamic tool invocation.
+
+<p align="center">
+  <img src="assets/banner.png" width="700">
+</p>
+
+AI Bus Trip Planner (ADK Agent)
  
 **Key capabilities:**
 - Remembers your home, college, and preferred departure time (via memory tool).
@@ -26,15 +34,38 @@ response = await bus_runner.run_debug(
 )
 print(response[-1])
 ```
+Architecture
+
+<p align="center">
+  <img src="assets/flowchart.png" width="700">
+</p>
+
 The agent will reply with a bus recommendation using its internal tools and memory.
 
+---
+
+***Problem Statement:***
+---
+
+**Current public transport information systems are often predominantly search-based rather than personalized assistants. Users must repeatedly input origin, destination, and time for every query, even for routine trips. This lack of state persistence (memory) and contextual awareness creates friction.
+The challenge is to build an AI agent that can:**
+
+*Abstract away static data: Interface with a fixed timetable using natural language instead of manual lookups.*
+
+*Retain context: Remember user-specific attributes (Home stop, College stop, preferred time) to enable shorthand queries like "Plan my usual trip."*
+
+*Reason about time: Dynamically filter future bus options based on a "departure after" constraint rather than just showing a full list.*
+
+---
 
 ***Implementation***
+---
 
 *This project uses Google’s Agent Development Kit (ADK) with a Gemini model to build a function-calling agent that can read a small in-notebook bus timetable and call custom Python tools. Four core tools are implemented: one to fetch bus options, one to estimate travel time, and two to store and retrieve the user profile (home, college, default departure time). An LlmAgent is configured with instructions to use these tools, and an InMemoryRunner manages the conversation flow so that natural language prompts are transformed into tool calls and final responses.*
 
 
 ***Why this project***
+---
 
 *Many students and commuters rely on fixed bus routes between home and college but do not have an easy way to check the best option for a specific time each day. Timetables are often static, hard to read, and require manual scanning, which is slow and error-prone during busy mornings. An AI agent that understands natural language and remembers personal preferences can make this daily planning faster, more accurate, and more accessible for all age groups.*
 
@@ -49,6 +80,7 @@ Extensible design: The same architecture can scale to real-time bus APIs or city
 
 
 ***Conclusion***
+---
 
 *The AI Bus Trip Planner demonstrates how an agent with memory and function tools can solve a focused, real‑world problem: daily bus trip planning between fixed locations. By remembering a user’s usual home and college stops, along with their preferred departure time, the agent reduces repetitive input and makes the experience feel more like talking to a personal assistant than working with a traditional timetable.*
 
