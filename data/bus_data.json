@@ -1,0 +1,4 @@
+[   {"route": "Home to College", "bus_no": "101", "departure": "08:15", "arrival": "08:55"},
+    {"route": "Home to College", "bus_no": "102", "departure": "08:45", "arrival": "09:25"},
+    {"route": "College to Home", "bus_no": "201", "departure": "16:10", "arrival": "16:50"},
+    {"route": "College to Home", "bus_no": "202", "departure": "17:00", "arrival": "17:40"}]
