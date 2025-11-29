@@ -51,11 +51,12 @@ The agent will reply with a bus recommendation using its internal tools and memo
 **Current public transport information systems are often predominantly search-based rather than personalized assistants. Users must repeatedly input origin, destination, and time for every query, even for routine trips. This lack of state persistence (memory) and contextual awareness creates friction.
 The challenge is to build an AI agent that can:**
 
-*Abstract away static data: Interface with a fixed timetable using natural language instead of manual lookups.*
+*   *Abstract away static data: Interface with a fixed timetable using natural language instead of manual lookups.*
 
-*Retain context: Remember user-specific attributes (Home stop, College stop, preferred time) to enable shorthand queries like "Plan my usual trip."*
+*   *Retain context: Remember user-specific attributes (Home stop, College stop, preferred time)*
+*   *To enable shorthand queries like "Plan my usual trip."*
 
-*Reason about time: Dynamically filter future bus options based on a "departure after" constraint rather than just showing a full list.*
+*   *Reason about time: Dynamically filter future bus options based on a "departure after" constraint rather than just showing a full list.*
 
 ---
 
@@ -80,12 +81,29 @@ The challenge is to build an AI agent that can:**
 
 ***Benefits***
 
-Personalized experience: The agent remembers the user’s home, college, and preferred departure time, so repeated queries become shorter and more natural.
+*   Personalized experience: The agent remembers the user’s home, college, and preferred departure time, so repeated queries become shorter and more natural.
 
-Faster decisions: Instead of scanning tables, users simply ask questions like “Plan my usual morning trip,” and immediately see the recommended bus.
+*   Faster decisions: Instead of scanning tables, users simply ask questions like “Plan my usual morning trip,” and immediately see the recommended bus.
 
-Extensible design: The same architecture can scale to real-time bus APIs or city-wide routes, making it suitable as a starting point for a production transit assistant.
+*   Extensible design: The same architecture can scale to real-time bus APIs or city-wide routes, making it suitable as a starting point for a production transit assistant.
 
+---
+## 🚀 Future Scope
+
+This project is designed to be scalable. Future enhancements include:
+
+*   **Predictive AI Analytics:** Implementing ML models to predict delays based on historical traffic and weather patterns rather than just real-time tracking.
+*   **Hardware Integration:** Deploying physical **ESP32/Raspberry Pi** modules with **NEO-6M GPS** on buses for live telemetry instead of simulated data.
+*   **Smart Occupancy Detection:** Using IR sensors or computer vision to provide real-time "Seat Availability" status to users before they board.
+*   **Multi-Modal Routing:** Upgrading the AI agent to coordinate between buses, metros, and last-mile cabs for door-to-door connectivity.
+*   **Voice-Activated Interface:** Adding voice command support for accessibility, allowing users to query bus timings hands-free.
+*   **Vehicle Health Monitoring:** Extending the IoT network to monitor engine health and fuel efficiency for predictive maintenance.
+
+---
+
+<p align="center">
+  <img src="assets/work.png" width="700">
+</p>
 
 ***Conclusion***
 ---
@@ -98,17 +116,6 @@ Extensible design: The same architecture can scale to real-time bus APIs or city
 
 
 ---
-<p align="center">
-  <img src="assets/work.png" width="700">
-</p>
 
-***Future Scope***
----
-
-This project is designed to be scalable. Future enhancements include:
-Predictive AI Analytics: Implementing ML models to predict delays based on historical traffic and weather patterns rather than just real-time tracking.​
-Hardware Integration: Deploying physical ESP32/Raspberry Pi modules with NEO-6M GPS on buses for live telemetry instead of simulated data.​
-Smart Occupancy Detection: Using IR sensors or computer vision to provide real-time "Seat Availability" status to users before they board.​
-Multi-Modal Routing: upgrading the AI agent to coordinate between buses, metros, and last-mile cabs for door-to-door connectivity.​
-Voice-Activated Interface: Adding voice command support for accessibility, allowing users to query bus timings hands-free.​
-Vehicle Health Monitoring: Extending the IoT network to monitor engine health and fuel efficiency for predictive maintenance.​
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
