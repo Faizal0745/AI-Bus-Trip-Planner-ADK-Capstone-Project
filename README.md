@@ -60,7 +60,7 @@ The challenge is to build an AI agent that can:**
 ---
 
 <p align="center">
-  <img src="assets/ui.png" width="700">
+  <img src="assets/ui2.png" width="700">
 </p>
 
 ***Implementation***
@@ -75,7 +75,7 @@ The challenge is to build an AI agent that can:**
 *Many students and commuters rely on fixed bus routes between home and college but do not have an easy way to check the best option for a specific time each day. Timetables are often static, hard to read, and require manual scanning, which is slow and error-prone during busy mornings. An AI agent that understands natural language and remembers personal preferences can make this daily planning faster, more accurate, and more accessible for all age groups.*
 
 <p align="center">
-  <img src="assets/ui2.png" width="700">
+  <img src="assets/ui.png" width="700">
 </p>
 
 ***Benefits***
